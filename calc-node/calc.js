@@ -1,15 +1,16 @@
 // jshint esversion:6
 const express = require ("express")
-const parser = require ("body-parser")
+const bodyParser = require ("body-parser")
 
 const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/",function(req,res){
     res.sendFile(__dirname+"/index.html")
 })
 
 app.post("/",function(req,res){
-    res.send("Thanks for posting")
+    console.log(req.body)
 })
 
 app.listen(3000,function(){
