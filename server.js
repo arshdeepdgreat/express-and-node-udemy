@@ -9,6 +9,9 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
   res.send('Contact me at arshdeepdgreat@gmail.com')
 })
+app.get('/about', (req, res) => {
+  res.send('Hey im arshdeep and i am learning nodejs')
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
